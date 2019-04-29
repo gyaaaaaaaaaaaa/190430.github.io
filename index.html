@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <style>
+    div {
+      line-height: 0;
+      text-align: center;
+    };
+  </style>
+  <script>
+    function test() {
+      /*---------------------------------------------
+       * 1段目
+      ---------------------------------------------*/
+      var arr1 = [
+        //0_下辺小（せまい）
+        [
+        "img/1/1_1.png",
+        "img/1/1_2.png",
+        "img/1/1_3.png",
+        "img/1/1_4.png",
+        "img/1/1_5.png",
+        "img/1/1_6.png",
+        ],
+        //1_下辺通常
+        [
+        "img/1/1_7.png",
+        "img/1/1_8.png",
+        "img/1/1_9.png",
+        "img/1/1_10.png",
+        "img/1/1_11.png",
+        "img/1/1_12.png",
+        ],
+        //2_下辺大（ひろい）
+        [
+        "img/1/1_13.png",
+        "img/1/1_14.png",
+        "img/1/1_15.png",
+        "img/1/1_16.png",
+        "img/1/1_17.png",
+        "img/1/1_18.png",
+        ],
+        //3_ぶちぬき下辺小（せまい）
+        [
+        "img/1/1_21.png",
+        ],
+        //4_ぶちぬき下辺通常
+        [
+        "img/1/1_20.png",
+        ],
+        //5_ぶちぬき下辺大（ひろい）
+        [
+        "img/1/1_19.png",
+        ],
+      ];
+      var tate1 = Math.floor(Math.random() * arr1.length);
+      var migi1 = Math.floor(Math.random() * arr1[tate1].length);
+      var dan1 = document.getElementById("1");
+      dan1.src = arr1[tate1][migi1];
+      var dan2 = document.getElementById("2");
+      dan2.src = "";
+      /*---------------------------------------------
+       * 3段目
+      ---------------------------------------------*/
+      if (
+        //1段目が下辺小（せまい）の2段ぶちぬきの場合
+        tate1 === 3
+      ) {
+        var arr3 = [
+          "img/3_2/3_2_13.png",
+          "img/3_2/3_2_14.png",
+          "img/3_2/3_2_15.png",
+          "img/3_2/3_2_16.png",
+          "img/3_2/3_2_17.png",
+          "img/3_2/3_2_18.png",
+        ];
+        var dan3 = document.getElementById("3");
+        var migi3 = Math.floor(Math.random() * arr3.length);
+        dan3.src = arr3[migi3];
+      }
+      else if (
+        //1段目が下辺通常の2段ぶちぬきの場合
+        tate1 === 4
+      ) {
+        var arr3 = [
+          "img/3_2/3_2_7.png",
+          "img/3_2/3_2_8.png",
+          "img/3_2/3_2_9.png",
+          "img/3_2/3_2_10.png",
+          "img/3_2/3_2_11.png",
+          "img/3_2/3_2_12.png",
+        ];
+        var dan3 = document.getElementById("3");
+        var migi3 = Math.floor(Math.random() * arr3.length);
+        dan3.src = arr3[migi3];
+      }
+      else if (
+        //1段目が下辺大（ひろい）の2段ぶちぬきの場合
+        tate1 === 5
+      ) {
+        var arr3 = [
+          "img/3_2/3_2_1.png",
+          "img/3_2/3_2_2.png",
+          "img/3_2/3_2_3.png",
+          "img/3_2/3_2_4.png",
+          "img/3_2/3_2_5.png",
+          "img/3_2/3_2_6.png",
+        ];
+        var dan3 = document.getElementById("3");
+        var migi3 = Math.floor(Math.random() * arr3.length);
+        dan3.src = arr3[migi3];
+      }
+      else if (
+        //1段目が2段ぶちぬきではない下辺小（せまい）の場合
+        tate1 === 0
+      ) {
+        var arr3 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //5_ぶちぬき下辺大（ひろい）
+          [
+          "img/3_1/3_1_19.png",
+          ],
+        ];
+        var dan3 = document.getElementById("3");
+        var tate3 = Math.floor(Math.random() * arr3.length);
+        var migi3 = Math.floor(Math.random() * arr1[tate3].length);
+        dan3.src = arr3[tate3][migi3];
+      }
+      else if (
+        //1段目が2段ぶちぬきではない下辺通常の場合
+        tate1 === 1
+      ) {
+        var arr3 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //4_ぶちぬき下辺通常
+          [
+          "img/3_1/3_1_20.png",
+          ],
+        ];
+        var dan3 = document.getElementById("3");
+        var tate3 = Math.floor(Math.random() * arr3.length);
+        var migi3 = Math.floor(Math.random() * arr1[tate3].length);
+        dan3.src = arr3[tate3][migi3];
+      }
+      else if (
+        //1段目が2段ぶちぬきではない下辺大（ひろい）の場合
+        tate1 === 2
+      ) {
+        var arr3 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //3_ぶちぬき下辺小（せまい）
+          [
+          "img/3_1/3_1_21.png",
+          ],
+        ];
+        var dan3 = document.getElementById("3");
+        var tate3 = Math.floor(Math.random() * arr3.length);
+        var migi3 = Math.floor(Math.random() * arr1[tate3].length);
+        dan3.src = arr3[tate3][migi3];
+      }
+      /*---------------------------------------------
+       * 2段目
+      ---------------------------------------------*/
+      if (
+        //1段目が下辺小（せまい）、3段目が下辺小（せまい）の場合
+        tate1 === 0 &&
+        tate3 === 0
+      ) {
+        var arr2 = [
+          "img/2_1/2_1_1.png",
+          "img/2_1/2_1_2.png",
+          "img/2_1/2_1_3.png",
+          "img/2_1/2_1_4.png",
+          "img/2_1/2_1_5.png",
+          "img/2_1/2_1_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺小（せまい）、3段目が下辺通常の場合
+        tate1 === 0 &&
+        tate3 === 1
+      ) {
+        var arr2 = [
+          "img/2_2/2_2_1.png",
+          "img/2_2/2_2_2.png",
+          "img/2_2/2_2_3.png",
+          "img/2_2/2_2_4.png",
+          "img/2_2/2_2_5.png",
+          "img/2_2/2_2_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺通常、3段目が下辺小（せまい）の場合
+        tate1 === 1 &&
+        tate3 === 0
+      ) {
+        var arr2 = [
+          "img/2_2/2_2_1.png",
+          "img/2_2/2_2_2.png",
+          "img/2_2/2_2_3.png",
+          "img/2_2/2_2_4.png",
+          "img/2_2/2_2_5.png",
+          "img/2_2/2_2_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺通常、3段目が下辺通常の場合
+        tate1 === 1 &&
+        tate3 === 1
+      ) {
+        var arr2 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺通常、3段目が下辺通常の場合
+        tate1 === 0 &&
+        tate3 === 2
+      ) {
+        var arr2 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺通常、3段目が下辺通常の場合
+        tate1 === 2 &&
+        tate3 === 0
+      ) {
+        var arr2 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺通常、3段目が下辺大（ひろい）の場合
+        tate1 === 1 &&
+        tate3 === 2
+      ) {
+        var arr2 = [
+          "img/2_4/2_4_1.png",
+          "img/2_4/2_4_2.png",
+          "img/2_4/2_4_3.png",
+          "img/2_4/2_4_4.png",
+          "img/2_4/2_4_5.png",
+          "img/2_4/2_4_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺大（ひろい）、3段目が下辺通常の場合
+        tate1 === 2 &&
+        tate3 === 1
+      ) {
+        var arr2 = [
+          "img/2_4/2_4_1.png",
+          "img/2_4/2_4_2.png",
+          "img/2_4/2_4_3.png",
+          "img/2_4/2_4_4.png",
+          "img/2_4/2_4_5.png",
+          "img/2_4/2_4_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      else if (
+        //1段目が下辺大（ひろい）、3段目が下辺大（ひろい）の場合
+        tate1 === 2 &&
+        tate3 === 2
+      ) {
+        var arr2 = [
+          "img/2_5/2_5_1.png",
+          "img/2_5/2_5_2.png",
+          "img/2_5/2_5_3.png",
+          "img/2_5/2_5_4.png",
+          "img/2_5/2_5_5.png",
+          "img/2_5/2_5_6.png",
+        ];
+        var dan2 = document.getElementById("2");
+        var migi2 = Math.floor(Math.random() * arr2.length);
+        dan2.src = arr2[migi2];
+      }
+      /*---------------------------------------------
+       * 4段目
+      ---------------------------------------------*/
+      var arr4 = [
+        //0_下辺小（せまい）
+        [
+        "img/1/1_1.png",
+        "img/1/1_2.png",
+        "img/1/1_3.png",
+        "img/1/1_4.png",
+        "img/1/1_5.png",
+        "img/1/1_6.png",
+        ],
+        //1_下辺通常
+        [
+        "img/1/1_7.png",
+        "img/1/1_8.png",
+        "img/1/1_9.png",
+        "img/1/1_10.png",
+        "img/1/1_11.png",
+        "img/1/1_12.png",
+        ],
+        //2_下辺大（ひろい）
+        [
+        "img/1/1_13.png",
+        "img/1/1_14.png",
+        "img/1/1_15.png",
+        "img/1/1_16.png",
+        "img/1/1_17.png",
+        "img/1/1_18.png",
+        ],
+        //3_ぶちぬき下辺小（せまい）
+        [
+        "img/1/1_21.png",
+        ],
+        //4_ぶちぬき下辺通常
+        [
+        "img/1/1_20.png",
+        ],
+        //5_ぶちぬき下辺大（ひろい）
+        [
+        "img/1/1_19.png",
+        ],
+      ];
+      var tate4 = Math.floor(Math.random() * arr4.length);
+      var migi4 = Math.floor(Math.random() * arr4[tate4].length);
+      var dan4 = document.getElementById("4");
+      dan4.src = arr4[tate4][migi4];
+      var dan5 = document.getElementById("5");
+      dan5.src = "";
+      /*---------------------------------------------
+       * 6段目
+      ---------------------------------------------*/
+      if (
+        //4段目が下辺小（せまい）の2段ぶちぬきの場合
+        tate4 === 3
+      ) {
+        var arr6 = [
+          "img/3_2/3_2_13.png",
+          "img/3_2/3_2_14.png",
+          "img/3_2/3_2_15.png",
+          "img/3_2/3_2_16.png",
+          "img/3_2/3_2_17.png",
+          "img/3_2/3_2_18.png",
+        ];
+        var dan6 = document.getElementById("6");
+        var migi6 = Math.floor(Math.random() * arr6.length);
+        dan6.src = arr6[migi6];
+      }
+      else if (
+        //4段目が下辺通常の2段ぶちぬきの場合
+        tate4 === 4
+      ) {
+        var arr6 = [
+          "img/3_2/3_2_7.png",
+          "img/3_2/3_2_8.png",
+          "img/3_2/3_2_9.png",
+          "img/3_2/3_2_10.png",
+          "img/3_2/3_2_11.png",
+          "img/3_2/3_2_12.png",
+        ];
+        var dan6 = document.getElementById("6");
+        var migi6 = Math.floor(Math.random() * arr6.length);
+        dan6.src = arr6[migi6];
+      }
+      else if (
+        //4段目が下辺大（ひろい）の2段ぶちぬきの場合
+        tate4 === 5
+      ) {
+        var arr6 = [
+          "img/3_2/3_2_1.png",
+          "img/3_2/3_2_2.png",
+          "img/3_2/3_2_3.png",
+          "img/3_2/3_2_4.png",
+          "img/3_2/3_2_5.png",
+          "img/3_2/3_2_6.png",
+        ];
+        var dan6 = document.getElementById("6");
+        var migi6 = Math.floor(Math.random() * arr6.length);
+        dan6.src = arr6[migi6];
+      }
+      else if (
+        //4段目が2段ぶちぬきではない下辺小（せまい）の場合
+        tate4 === 0
+      ) {
+        var arr6 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //5_ぶちぬき下辺大（ひろい）
+          [
+          "img/3_1/3_1_19.png",
+          ],
+        ];
+        var dan6 = document.getElementById("6");
+        var tate6 = Math.floor(Math.random() * arr6.length);
+        var migi6 = Math.floor(Math.random() * arr4[tate6].length);
+        dan6.src = arr6[tate6][migi6];
+      }
+      else if (
+        //4段目が2段ぶちぬきではない下辺通常の場合
+        tate4 === 1
+      ) {
+        var arr6 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //4_ぶちぬき下辺通常
+          [
+          "img/3_1/3_1_20.png",
+          ],
+        ];
+        var dan6 = document.getElementById("6");
+        var tate6 = Math.floor(Math.random() * arr6.length);
+        var migi6 = Math.floor(Math.random() * arr4[tate6].length);
+        dan6.src = arr6[tate6][migi6];
+      }
+      else if (
+        //4段目が2段ぶちぬきではない下辺大（ひろい）の場合
+        tate4 === 2
+      ) {
+        var arr6 = [
+          //0_下辺小（せまい）
+          [
+          "img/3_1/3_1_1.png",
+          "img/3_1/3_1_2.png",
+          "img/3_1/3_1_3.png",
+          "img/3_1/3_1_4.png",
+          "img/3_1/3_1_5.png",
+          "img/3_1/3_1_6.png",
+          ],
+          //1_下辺通常
+          [
+          "img/3_1/3_1_7.png",
+          "img/3_1/3_1_8.png",
+          "img/3_1/3_1_9.png",
+          "img/3_1/3_1_10.png",
+          "img/3_1/3_1_11.png",
+          "img/3_1/3_1_12.png",
+          ],
+          //2_下辺大（ひろい）
+          [
+          "img/3_1/3_1_13.png",
+          "img/3_1/3_1_14.png",
+          "img/3_1/3_1_15.png",
+          "img/3_1/3_1_16.png",
+          "img/3_1/3_1_17.png",
+          "img/3_1/3_1_18.png",
+          ],
+          //3_ぶちぬき下辺小（せまい）
+          [
+          "img/3_1/3_1_21.png",
+          ],
+        ];
+        var dan6 = document.getElementById("6");
+        var tate6 = Math.floor(Math.random() * arr6.length);
+        var migi6 = Math.floor(Math.random() * arr4[tate6].length);
+        dan6.src = arr6[tate6][migi6];
+      }
+      /*---------------------------------------------
+       * 5段目
+      ---------------------------------------------*/
+      if (
+        //4段目が下辺小（せまい）、6段目が下辺小（せまい）の場合
+        tate4 === 0 &&
+        tate6 === 0
+      ) {
+        var arr5 = [
+          "img/2_1/2_1_1.png",
+          "img/2_1/2_1_2.png",
+          "img/2_1/2_1_3.png",
+          "img/2_1/2_1_4.png",
+          "img/2_1/2_1_5.png",
+          "img/2_1/2_1_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺小（せまい）、6段目が下辺通常の場合
+        tate4 === 0 &&
+        tate6 === 1
+      ) {
+        var arr5 = [
+          "img/2_2/2_2_1.png",
+          "img/2_2/2_2_2.png",
+          "img/2_2/2_2_3.png",
+          "img/2_2/2_2_4.png",
+          "img/2_2/2_2_5.png",
+          "img/2_2/2_2_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺通常、6段目が下辺小（せまい）の場合
+        tate4 === 1 &&
+        tate6 === 0
+      ) {
+        var arr5 = [
+          "img/2_2/2_2_1.png",
+          "img/2_2/2_2_2.png",
+          "img/2_2/2_2_3.png",
+          "img/2_2/2_2_4.png",
+          "img/2_2/2_2_5.png",
+          "img/2_2/2_2_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺通常、6段目が下辺通常の場合
+        tate4 === 1 &&
+        tate6 === 1
+      ) {
+        var arr5 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺通常、6段目が下辺通常の場合
+        tate4 === 0 &&
+        tate6 === 2
+      ) {
+        var arr5 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺通常、6段目が下辺通常の場合
+        tate4 === 2 &&
+        tate6 === 0
+      ) {
+        var arr5 = [
+          "img/2_3/2_3_1.png",
+          "img/2_3/2_3_2.png",
+          "img/2_3/2_3_3.png",
+          "img/2_3/2_3_4.png",
+          "img/2_3/2_3_5.png",
+          "img/2_3/2_3_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺通常、6段目が下辺大（ひろい）の場合
+        tate4 === 1 &&
+        tate6 === 2
+      ) {
+        var arr5 = [
+          "img/2_4/2_4_1.png",
+          "img/2_4/2_4_2.png",
+          "img/2_4/2_4_3.png",
+          "img/2_4/2_4_4.png",
+          "img/2_4/2_4_5.png",
+          "img/2_4/2_4_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺大（ひろい）、6段目が下辺通常の場合
+        tate4 === 2 &&
+        tate6 === 1
+      ) {
+        var arr5 = [
+          "img/2_4/2_4_1.png",
+          "img/2_4/2_4_2.png",
+          "img/2_4/2_4_3.png",
+          "img/2_4/2_4_4.png",
+          "img/2_4/2_4_5.png",
+          "img/2_4/2_4_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+      else if (
+        //4段目が下辺大（ひろい）、6段目が下辺大（ひろい）の場合
+        tate4 === 2 &&
+        tate6 === 2
+      ) {
+        var arr5 = [
+          "img/2_5/2_5_1.png",
+          "img/2_5/2_5_2.png",
+          "img/2_5/2_5_3.png",
+          "img/2_5/2_5_4.png",
+          "img/2_5/2_5_5.png",
+          "img/2_5/2_5_6.png",
+        ];
+        var dan5 = document.getElementById("5");
+        var migi5 = Math.floor(Math.random() * arr5.length);
+        dan5.src = arr5[migi5];
+      }
+    };
+  </script>
+</head>
+<body>
+  <div>
+    <img src="D1bpRRIU8AAp-Jd.jpg" onclick="test()" width="10%"><br />
+    <p>わるぞ〜</p>
+    <img id="1" src="" width="20%"><br />
+    <img id="2" src="" width="20%"><br />
+    <img id="3" src="" width="20%"><br />
+    <p>1</p>
+    <img id="4" src="" width="20%"><br />
+    <img id="5" src="" width="20%"><br />
+    <img id="6" src="" width="20%"><br />
+    <p>2</p>
+  </div>
+</body>
+</html>
